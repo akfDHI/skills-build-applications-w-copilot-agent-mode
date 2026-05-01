@@ -10,7 +10,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>OctoFit Tracker</h1>
+        <div className="App-brand">
+          <img
+            className="App-logo"
+            src={`${process.env.PUBLIC_URL}/octofitapp-small.png`}
+            alt="OctoFit logo"
+          />
+          <h1>OctoFit Tracker</h1>
+        </div>
         <nav className="App-nav" aria-label="Main navigation">
           <NavLink to="/activities">Activities</NavLink>
           <NavLink to="/leaderboard">Leaderboard</NavLink>
