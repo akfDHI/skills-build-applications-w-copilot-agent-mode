@@ -1,0 +1,179 @@
+:root {
+  --ink-900: #11223d;
+  --ink-700: #2f4a6d;
+  --ocean-700: #0f6e7f;
+  --ocean-500: #2ba7bb;
+  --sun-500: #ffb703;
+  --sun-600: #fb8500;
+  --cloud-100: #f4f9ff;
+  --cloud-200: #e4f2ff;
+  --cloud-300: #d2e9ff;
+  --card: #ffffff;
+}
+
+.App {
+  min-height: 100vh;
+  color: var(--ink-900);
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255, 183, 3, 0.24), transparent 38%),
+    radial-gradient(circle at 88% 6%, rgba(43, 167, 187, 0.22), transparent 34%),
+    linear-gradient(165deg, var(--cloud-200) 0%, var(--cloud-100) 45%, #fff9ef 100%);
+}
+
+.App-header {
+  background: linear-gradient(110deg, #0b3d91 0%, var(--ocean-700) 55%, #0a9396 100%);
+  color: #fff;
+  padding: 1.1rem 1rem 1.2rem;
+  box-shadow: 0 12px 26px rgba(17, 34, 61, 0.2);
+}
+
+.App-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.85rem;
+}
+
+.App-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 14px;
+  padding: 0.35rem;
+  box-shadow: 0 8px 16px rgba(7, 36, 81, 0.28);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+.App-nav {
+  margin-top: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.App-nav a {
+  color: #ecf8ff;
+  text-decoration: none;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(236, 248, 255, 0.5);
+  background: rgba(16, 88, 123, 0.38);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.App-nav a:hover,
+.App-nav a:focus-visible {
+  color: #062a5a;
+  background: #ffefc4;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.App-nav a.active {
+  color: #062a5a;
+  background: #ffd166;
+  border-color: #ffd166;
+  font-weight: 700;
+}
+
+.App-main {
+  padding: 1.3rem 1rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.App-main section {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--cloud-300);
+  border-radius: 16px;
+  padding: 1rem 1rem 1.1rem;
+  box-shadow: 0 8px 18px rgba(17, 34, 61, 0.08);
+}
+
+.App-main h2,
+.App-main h3 {
+  color: #0f4d9b;
+  margin-top: 0;
+  font-family: Verdana, 'Trebuchet MS', sans-serif;
+}
+
+.App-main p,
+.App-main li {
+  color: var(--ink-700);
+}
+
+.App-main a {
+  color: #005f99;
+  text-underline-offset: 0.15em;
+}
+
+.App-main a:hover,
+.App-main a:focus-visible {
+  color: #ad4f00;
+}
+
+.App-main table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #a9d3ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.App-main th,
+.App-main td {
+  border: 1px solid #c8e3ff;
+  padding: 0.55rem 0.7rem;
+  color: var(--ink-900);
+}
+
+.App-main th {
+  background: #bee3ff;
+  color: #043b71;
+}
+
+.App-main tr:nth-child(even) td {
+  background: #f4faff;
+}
+
+.App-main button {
+  color: #082544;
+  background: linear-gradient(120deg, var(--sun-500), var(--sun-600));
+  border: 1px solid rgba(171, 87, 0, 0.35);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.App-main button:hover,
+.App-main button:focus-visible {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .App-header {
+    padding: 0.9rem 0.8rem 1rem;
+  }
+
+  .App-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .App-main {
+    padding: 1rem 0.75rem 1.4rem;
+  }
+}
