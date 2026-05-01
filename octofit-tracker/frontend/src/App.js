@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Activities from './components/Activities';
+import Leaderboard from './components/Leaderboard';
+import Teams from './components/Teams';
+import Users from './components/Users';
+import Workouts from './components/Workouts';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>OctoFit Tracker</h1>
+        <nav className="App-nav" aria-label="Main navigation">
+          <NavLink to="/activities">Activities</NavLink>
+          <NavLink to="/leaderboard">Leaderboard</NavLink>
+          <NavLink to="/teams">Teams</NavLink>
+          <NavLink to="/users">Users</NavLink>
+          <NavLink to="/workouts">Workouts</NavLink>
+        </nav>
       </header>
+
+      <main className="App-main">
+        <Routes>
+          <Route path="/" element={<Navigate to="/activities" replace />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/workouts" element={<Workouts />} />
+        </Routes>
+      </main>
     </div>
   );
 }
