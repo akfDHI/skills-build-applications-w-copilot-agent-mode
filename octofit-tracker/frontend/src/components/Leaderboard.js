@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 
-const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`;
+const apiBase = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
+  : 'http://localhost:8000';
+const endpoint = `${apiBase}/api/leaderboard/`;
 
 function Leaderboard() {
   const [entries, setEntries] = useState([]);
